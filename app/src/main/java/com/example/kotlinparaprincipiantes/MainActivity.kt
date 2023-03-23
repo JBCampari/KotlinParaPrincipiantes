@@ -360,21 +360,20 @@ class MainActivity : AppCompatActivity() {
     //Aquí vamos a hablar de las clases.
     fun clases (){
 
-        val Jesus = Programmer("Jesus", 56, arrayOf(Programmer.Lenguaje.KOTLIN,Programmer.Lenguaje.PASCAL))
+        val Jesus = Programmer("Jesus", 56, arrayOf(Programmer.Lenguaje.KOTLIN,Programmer.Lenguaje.PASCAL), arrayOf(Programmer.Amigo.SARA))
         println(Jesus.nombre)
         println(Jesus.edad)
         println(Jesus.lenguajes[1])
-        Jesus.Codigo()
-        /* Estudiar porqué no funciona !!
-        println("${Jesus.Amigos?.first()?.nombre} es amigo de ${Jesus.nombre}")
-         */
+        Jesus.codigo()
+        println("${Jesus.Amigos?.last()} es amigo de ${Jesus.nombre}")
 
-        val Sara = Programmer("Sara",33, arrayOf(Programmer.Lenguaje.JAVA, Programmer.Lenguaje.C_SHARP), arrayOf(Jesus))
+        val Sara = Programmer("Sara",33, arrayOf(Programmer.Lenguaje.JAVA, Programmer.Lenguaje.C_SHARP), arrayOf(Programmer.Amigo.JESUS))
         println(Sara.nombre)
         println(Sara.edad)
         println(Sara.lenguajes[1])
-        Sara.Codigo()
-        println("${Sara.Amigos?.first()?.nombre} es amigo de ${Sara.nombre}")
+        Sara.codigo()
+        println("${Sara.Amigos?.first()} es amigo de ${Sara.nombre}")
+
     }
 
 }

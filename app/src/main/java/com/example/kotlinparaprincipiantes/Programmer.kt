@@ -4,7 +4,7 @@ class Programmer(
     val nombre: String,
     val edad: Int,
     val lenguajes: Array<Lenguaje>,
-    var Amigos: Array<Programmer>? = null
+    var Amigos: Array<Amigo>? = null
     ) {
 
     enum class Lenguaje {
@@ -14,9 +14,15 @@ class Programmer(
         PASCAL
     }
 
-    fun Codigo(){
+    enum class Amigo {
+        JESUS,
+        SARA
+    }
+
+    fun codigo(){
         for (lenguaje in lenguajes){
             println("Estoy programando en $lenguaje")
         }
     }
 }
+
